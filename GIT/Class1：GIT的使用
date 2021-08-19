@@ -3,7 +3,7 @@
 - 暂存区：当修改后的文件add操作后即进入了暂存区
 - 版本库：暂存区中的文件提交后（commit）后即进入了本地版本库，push后进入远程仓库
 
-<font color="red">**todo**</font>
+<font color="red">todo</font>
 
 
 # GIT的使用
@@ -26,6 +26,7 @@ git init
 git add file // 将file添加到暂存区，可以提交多个文件，用空格分割文件名即可
 git add . // 将工作区所有的文件提交到暂存区
 ```
+
 ```git
 git commit -m "xxx" // 将暂存区中的文件提交到版本库，xxx为本次提交的说明
 ```
@@ -40,11 +41,50 @@ git reset hard HEAD^ // 这是回到上一个版本，^^就是回到上上个版
 git reset hard 5d20215955 // 可以通过版本号进行回滚和“冲向未来”（回滚后后悔了通过这个还原） 值得一提的是 版本号不需要写全git会自动帮你找，不过多写一点比较稳妥
 git reflog // 记录了我们每一次的操作
 ```
+> reset 命令的更细节
+> git reset [--soft] [--mixed] [--hard] [HEAD]
+> -- mixed为默认，可以不用带该参数，用户重置暂存区的文件与上一次提交保持一次，工作区文件内容不变
+### 文件删除
 
+```git
+git rm file // 删除一个文件 提交后版本库中文件也删除  会丢失工作区中的内容 不会丢弃版本库中的内容
+```
+
+### 其它
+
+```git
+git status // 查看文件状态 有待提交，待推送等
+```
+```git
+git diff HEAD -- file // 查看工作区和版本库中最新版本 file的区别
+git checkout -- file // 撤销file在工作区中的修改 
+```
 ## 远程仓库操作
+添加远程仓库的操作自行百度，不难。比如github就是找到地方点点点就ojbk了。以下只介绍有关git的操作
+> 简单介绍有关步骤
+> 创建好远程仓库后，一般会给出很多种地址，包括https和ssh等
+> 需要注意的是，建好远程仓库后你不能直接进行推送和拉取（down zip除外），需要添加自己的公钥和私钥 具体自行百度
+> ```git
+> ssh-keygen -t rsa -C "email@xx.xxx"  // 生成私钥和公钥命令
+> ```
+```git
+/**
+ * 当创建好了远程仓库后，可以使用本地的版本库与之关联，也可以直接拉取后构建自己的项目
+ * 关联一个远程库时必须给远程库指定一个名字，origin是默认习惯命名；
+ */
+git remote add origin url.git // 在本地仓库目录下执行命令，与对应的url git远程仓库关联
+git push -u origin master // 第一次推送本地所有内容
+git push origin master // 每次提交后都需要推送
+
+
+git clone url.git // 克隆仓库到本地版本库，有很多协议可用，但是ssh更快哦
+```
+
 
 ### 克隆远程仓库中文件
-
+```git
+git colon 
+```
 ### 添加远程库
 
 
