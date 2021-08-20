@@ -55,6 +55,9 @@ git rm file // 删除一个文件 提交后版本库中文件也删除  会丢�
 ```git
 git status // 查看文件状态 有待提交，待推送等
 ```
+> git status 详细：
+> - Changes to be commit    已经从工作区提交到暂存区了，可以通过git restore --stange fileName 命令将该文件从暂存区中移出到工作区
+> - Changes not staged for commit 工作区和暂存区中都存在的文件 可以通过git add filaName 将文件加入到暂存区 
 ```git
 git diff HEAD -- file // 查看工作区和版本库中最新版本 file的区别
 git checkout -- file // 撤销file在工作区中的修改 
@@ -67,6 +70,7 @@ git checkout -- file // 撤销file在工作区中的修改
 > ```git
 > ssh-keygen -t rsa -C "email@xx.xxx"  // 生成私钥和公钥命令
 > ```
+> 生成后将公钥添加到远程仓库管理的key即可
 ```git
 /**
  * 当创建好了远程仓库后，可以使用本地的版本库与之关联，也可以直接拉取后构建自己的项目
@@ -76,24 +80,40 @@ git remote add origin url.git // 在本地仓库目录下执行命令，与对�
 git push -u origin master // 第一次推送本地所有内容
 git push origin master // 每次提交后都需要推送
 
-
 git clone url.git // 克隆仓库到本地版本库，有很多协议可用，但是ssh更快哦
 ```
 
-
-### 克隆远程仓库中文件
-```git
-git colon 
-```
-### 添加远程库
-
-
 ## 分支操作
-
+### 分支查看
+```git
+git branch // 查看本地分支
+git branch -a // 查看本地和远程所有分支
+git branch -r // 查看远程分支
+git remote update -p // 刷新远程分支
+```
 ### 创建分支
+```git
+git branch name // 创建分支
+git checkout name || git switch name // 切换分支
+git checkout -b name || git switch -c name // 创建并切换分支 
+
+git push origin name // 推送本地分支到远程
+```
 
 ### 删除分支
+```git
+git branch -d name // 删除分支
+```
 
+### 合并操作
+```git
+// 用带参数的git log可以查看分支的合并情况  
+// ps ： 用git log --graph 查看分支合并图
+git log --graph --pretty=oneline --abbrev-commit
+
+git merge branchName // 合并分支， 一般情况想使用的是fast Forward 模式合并，该模式下删除分支后会丢失分支数据
+git merge --no-ff -m "xxx" branchName // 禁止fast Forward 的模式合并分支，会生成一个新的提交 xxx为新提交的备注内容
+```
 
 ## 标签操作
 
@@ -105,5 +125,7 @@ git colon
 
 
 ## 其他细节操作
-
-
+```git
+git config --global alias.别名 命令  // 给命令设置别名
+git commit --amend --no-edit // 给commit重新生成commit id
+```
