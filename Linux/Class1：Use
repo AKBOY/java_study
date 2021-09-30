@@ -58,7 +58,7 @@ halt # 关闭系统，等同于shutdown –h now 和 poweroff
 
 ## 系统目录结构
 
-![image-20201021123038025](..\resource\images\image-20201021123038025.png)
+![image-20201021123038025](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20201021123038025.png)
 
 
 
@@ -227,7 +227,7 @@ Linux系统是一种典型的多用户系统，不同的用户处于不同的地
 
 在Linux中我们可以使用`ll`或者`ls –l`命令来显示一个文件的属性以及文件所属的用户和组，如：
 
-![image-20201025221739574](..\resource\images\image-20201025221739574.png)
+![image-20201025221739574](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20201025221739574.png)
 
 第一个字符代表这个文件是目录，文件还是链接文件等。
 
@@ -239,7 +239,7 @@ Linux系统是一种典型的多用户系统，不同的用户处于不同的地
 
 接下来的9个字符，分别代表对应用户权限：
 
-![image-20201026102508013](..\resource\images\image-20201026102508013.png)
+![image-20201026102508013](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20201026102508013.png)
 
 > 修改文件属性
 >
@@ -462,7 +462,7 @@ vim 则可以说是程序开发者的一项很好用的工具。
 
 连 vim 的官方网站 (http://www.vim.org) 自己也说 vim 是一个程序开发工具而不是文字处理软件。
 
-vim 键盘图：![image-20201027103616197](..\resource\images\image-20201027103616197.png)
+vim 键盘图：![image-20201027103616197](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20201027103616197.png)
 
 ## 三种使用模式
 
@@ -515,7 +515,7 @@ vim 键盘图：![image-20201027103616197](..\resource\images\image-202010271036
 
 简单的说，我们可以将这三个模式想成底下的图标来表示：
 
-![image-20201027103644574](..\resource\images\image-20201027103644574.png)
+![image-20201027103644574](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20201027103644574.png)
 
 ## Vim 按键说明
 

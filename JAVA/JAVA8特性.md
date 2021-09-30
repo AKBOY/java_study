@@ -17,9 +17,9 @@
 - 你可以通过 Lambda 表达式来创建该接口的对象。（若 Lambda表达式抛出一个受检异常，那么该异常需要在目标接口的抽象方法上进行声明）。
 - 我们可以在任意函数式接口上使用 @FunctionalInterface 注解，这样做可以检查它是否是一个函数式接口，同时 javadoc 也会包含一条声明，说明这个接口是一个函数式接口。
 
-![image-20200707115630687](..\resource\images\image-20200707115630687.png)
+![image-20200707115630687](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200707115630687.png)
 
-![image-20200707115644870](..\resource\images\image-20200707115644870.png)
+![image-20200707115644870](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200707115644870.png)
 
 ## 方法引用和构造器引用
 
@@ -97,31 +97,31 @@ List<User> users = Arrays.asList(
 
 **stream流的中间操作：**
 
-![image-20200707144949697](..\resource\images\image-20200707144949697.png)
+![image-20200707144949697](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200707144949697.png)
 
 > filter(PreDicate p)：传入一个断定性接口，返回true则留下。返回false则除去
 >
 > distinct()：去除重复的元素，筛选， 通过流所生成的元素的hashCode() 和 equals() 去除重复元素。需要重写hashCode和equals方法
 
-![image-20200707144958854](..\resource\images\image-20200707144958854.png)
+![image-20200707144958854](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200707144958854.png)
 
 > map(Function f)：函数式接口，入参变成出参新建一个stream流
 >
 > 
 
-![image-20200707145009756](..\resource\images\image-20200707145009756.png)
+![image-20200707145009756](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200707145009756.png)
 
-![image-20200707145016864](..\resource\images\image-20200707145016864.png)
+![image-20200707145016864](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200707145016864.png)
 
-![image-20200707145023669](..\resource\images\image-20200707145023669.png)
+![image-20200707145023669](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200707145023669.png)
 
-![image-20200707145031854](..\resource\images\image-20200707145031854.png)
+![image-20200707145031854](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200707145031854.png)
 
-![image-20200707145038047](..\resource\images\image-20200707145038047.png)
+![image-20200707145038047](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200707145038047.png)
 
-![image-20200707145100057](..\resource\images\image-20200707145100057.png)
+![image-20200707145100057](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200707145100057.png)
 
-![image-20200707145109259](..\resource\images\image-20200707145109259.png)
+![image-20200707145109259](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200707145109259.png)
 
 
 
@@ -239,4 +239,4 @@ java.time.format.DateTimeFormatter 类：该类提供了三种格式化方法：
 
 #### 与传统日期处理的转换
 
-![image-20200707113747770](..\resource\images\image-20200707113747770.png)
+![image-20200707113747770](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200707113747770.png)

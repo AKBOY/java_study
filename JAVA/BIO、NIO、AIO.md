@@ -22,7 +22,7 @@ Java 中的 BIO、NIO和 AIO 理解为是 Java 语言对操作系统的各种 IO
 
 BIO通信（——请求——应答）模型图如下：
 
-![image-20200824094940796](..\resource\images\image-20200824094940796.png)
+![image-20200824094940796](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200824094940796.png)
 
 采用 **BIO 通信模型** 的服务端，通常由一个独立的 Acceptor 线程负责监听客户端的连接。我们一般通过在`while(true)` 循环中服务端会调用 `accept()` 方法等待接收客户端的连接的方式监听请求，请求一旦接收到一个连接请求，就可以建立通信套接字在这个通信套接字上进行读写操作，此时不能再接收其他客户端连接请求，只能等待同当前连接的客户端的操作执行完成， 不过可以通过多线程来支持多个客户端的连接，如上图所示。
 
@@ -94,7 +94,7 @@ NIO有选择器，而IO没有。
 
 选择器用于使用单个线程处理多个通道。因此，它需要较少的线程来处理这些通道。线程之间的切换对于操作系统来说是昂贵的。 因此，为了提高系统效率选择器是有用的。
 
-![image-20201023094931288](..\resource\images\image-20201023094931288.png)
+![image-20201023094931288](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20201023094931288.png)
 
 ### 2.3 NIO 读数据和写数据方式
 
@@ -105,7 +105,7 @@ NIO有选择器，而IO没有。
 
 数据读取和写入操作图示：
 
-![image-20201023094943288](..\resource\images\image-20201023094943288.png)
+![image-20201023094943288](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20201023094943288.png)
 
 ### 2.4 NIO核心组件简单介绍
 

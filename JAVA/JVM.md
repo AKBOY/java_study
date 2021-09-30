@@ -1,4 +1,4 @@
- ![image-20200720205441371](..\resource\images\image-20200720205441371.png)
+ ![image-20200720205441371](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200720205441371.png)
 
 # JVM理解
 
@@ -54,7 +54,7 @@
 
 a=10;
 
-![image-20200806202609370](..\resource\images\image-20200806202609370.png)
+![image-20200806202609370](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200806202609370.png)
 
 ## 类加载器	ClassLoader
 
@@ -67,7 +67,7 @@ a=10;
 > 3）App ClassLoader 负责加载classpath中指定的jar包及 Djava.class.path 所指定目录下的类和jar包。
 > 4）Custom ClassLoader 通过java.lang.ClassLoader的子类自定义加载class，属于应用程序根据自身需要自定义的ClassLoader，如tomcat、jboss都会根据j2ee规范自行实现ClassLoader。
 
-![image-20200806202928417](..\resource\images\image-20200806202928417.png)
+![image-20200806202928417](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200806202928417.png)
 
 ### 加载原则（双亲委派原则）
 
@@ -79,7 +79,7 @@ a=10;
 
 ## 运行时数据区
 
-![image-20200806201422348](..\resource\images\image-20200806201422348.png)
+![image-20200806201422348](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200806201422348.png)
 
 - **方法区（Method Area）：**用来存储类的信息、常量、方法等元数据信息。（class Info）
 - **堆（Heap）：**用来存储实例对象（new 对象）
@@ -93,7 +93,7 @@ a=10;
 
 
 
-![image-20200806195134656](..\resource\images\image-20200806195134656.png)
+![image-20200806195134656](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200806195134656.png)
 
 定义：==每个栈帧对应一个被调用的方法，可以理解为一个方法的运行空间==
 
@@ -109,7 +109,7 @@ a=10;
 
 ## java对象内存模型
 
-![image-20200806210601067](..\resource\images\image-20200806210601067.png)
+![image-20200806210601067](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200806210601067.png)
 
 一个java对象在内存中包括三个部分：内存头、实例数据、对齐填充
 
@@ -123,7 +123,7 @@ JVM内存模型主要从**方法区（非堆）和堆这两方面**说明，因�
 
 ## 图形展示
 
-![image-20200807174002461](..\resource\images\image-20200807174002461.png)
+![image-20200807174002461](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200807174002461.png)
 
 > 一块是非堆区(方法区)，一块是堆区
 > 堆区分为两大块，一个是Old区，一个是Young区
@@ -136,7 +136,7 @@ JVM内存模型主要从**方法区（非堆）和堆这两方面**说明，因�
 
 > 新对象的产生会产生在Eden区，当达到某个临界值（一般是Eden区的一半）时触发GC，未被回收的对象符复制到S0或者S1区，清空Eden区，当Eden区再一次触发GC时，将S0或者S1区未被回收的对象以及Eden区未被回收的对象复制到另外一个Surbovor区（S0和S1必然有一个为空，这是牺牲空间换连续地址），当age大于old时（默认是15）时该对象会被移至old区。，如果old区依旧不足会触发MajorGC，MajorGC一般会触发MinorGC，相当于FullGC，FullGC之后空间还是不足不有OOM异常产生**注意：**一些较大的对象会被直接放入old区
 
-![image-20200807210706778](..\resource\images\image-20200807210706778.png)
+![image-20200807210706778](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200807210706778.png)
 
 > 其他细节：
 >
@@ -208,7 +208,7 @@ JVM内存模型主要从**方法区（非堆）和堆这两方面**说明，因�
 
   通过GC Root的对象，开始向下寻找，看某个对象是否可达
 
-  ![image-20200807213945061](..\resource\images\image-20200807213945061.png)
+  ![image-20200807213945061](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200807213945061.png)
 
 > 能作为GC Root:类加载器、Thread、虚拟机栈的本地变量表、static成员、常量引用、本地方法栈的变量等
 >
@@ -278,7 +278,7 @@ GC是由JVM自动完成的，根据JVM系统环境而定，所以时机是不确
 
 如果说收集算法是内存回收的方法论，那么垃圾收集器就是内存回收的具体实现。
 
-![image-20200808115035232](..\resource\images\image-20200808115035232.png)
+![image-20200808115035232](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200808115035232.png)
 
 ### Serial
 
@@ -291,13 +291,13 @@ Serial收集器是最基本、发展历史最悠久的收集器，曾经（在JD
 > **适用范围：**新生代
 > **应用：**Client模式下的默认新生代收集器
 
-![image-20200808115126191](..\resource\images\image-20200808115126191.png)
+![image-20200808115126191](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200808115126191.png)
 
 ### Serial Old
 
 Serial Old收集器是Serial收集器的老年代版本，也是一个单线程收集器，不同的是采用"标记-整理算法"，运行过程和Serial收集器一样。
 
-![image-20200808115153397](..\resource\images\image-20200808115153397.png)
+![image-20200808115153397](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200808115153397.png)
 
 ### ParNew
 
@@ -309,7 +309,7 @@ Serial Old收集器是Serial收集器的老年代版本，也是一个单线程�
 > **适用范围：**新生代
 > **应用：**运行在Server模式下的虚拟机中首选的新生代收集器
 
-![image-20200808223717140](..\resource\images\image-20200808223717140.png)
+![image-20200808223717140](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200808223717140.png)
 
 ### Parallel Scavenge（相对ParNew来说它的吞吐量更大）
 
@@ -340,7 +340,7 @@ CMS(Concurrent Mark Sweep)收集器是一种以获取 **最短回收停顿时间
 由于整个过程中，并发标记和并发清除，收集器线程可以与用户线程一起工作，所以总体上来
 说，CMS收集器的内存回收过程是与用户线程一起并发地执行的。
 
-![image-20200808223847538](..\resource\images\image-20200808223847538.png)
+![image-20200808223847538](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200808223847538.png)
 
 **优点：**并发收集、低停顿
 **缺点：**产生大量空间碎片、并发阶段会降低吞吐量
@@ -355,7 +355,7 @@ CMS(Concurrent Mark Sweep)收集器是一种以获取 **最短回收停顿时间
 > （3）可预测的停顿（比CMS更先进的地方在于能让使用者明确指定一个长度为M毫秒的时间片段内，消
 > 耗在垃圾收集上的时间不得超过N毫秒）
 
-![image-20200808223928040](..\resource\images\image-20200808223928040.png)
+![image-20200808223928040](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200808223928040.png)
 
 工作过程可以分为如下几步
 
@@ -370,7 +370,7 @@ CMS(Concurrent Mark Sweep)收集器是一种以获取 **最短回收停顿时间
 
 ==ps:==如果有大对象放不下Region区，会直接放到H中
 
-![image-20200808223951187](..\resource\images\image-20200808223951187.png)
+![image-20200808223951187](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200808223951187.png)
 
 ###  ZGC==？？？==
 
@@ -382,13 +382,13 @@ JDK11新引入的ZGC收集器，不管是物理上还是逻辑上，ZGC中已经
 > （2）支持TB级别的内存
 > （3）堆内存变大后停顿时间还是在10ms以内
 
-![image-20200808224023447](..\resource\images\image-20200808224023447.png)
+![image-20200808224023447](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200808224023447.png)
 
 ==（不懂，查资料。。。。。）==
 
 ### 各种GC总结 
 
-![image-20200807203656365](..\resource\images\image-20200807203656365.png)
+![image-20200807203656365](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200807203656365.png)
 
 评价垃圾收集器的好坏：停顿时间和吞吐量
 
@@ -679,7 +679,7 @@ ParallelGC。
 > 最终JVM需要把字节码指令转换为机器码，可以理解为是0101这样的机器语言，这样才能运行在不同的机器
 > 上，那么由字节码转变为机器码是谁来做的呢？说白了就是谁来执行这些字节码指令的呢？这就是执行引擎
 
-![image-20200812091059387](..\resource\images\image-20200812091059387.png)
+![image-20200812091059387](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200812091059387.png)
 
 ## 解释执行
 
@@ -755,7 +755,7 @@ JVM采用的事混合模式，也就是解析+编译的方式，对于大部分�
 正常情况下不需要设置，那如果是促销或者秒杀的场景呢？
 每台机器配置2c4G，以每秒3000笔订单为例，整个过程持续60秒
 
-![image-20200812091949342](..\resource\images\image-20200812091949342.png)
+![image-20200812091949342](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200812091949342.png)
 
 ### 内存溢出
 
@@ -774,7 +774,7 @@ JVM采用的事混合模式，也就是解析+编译的方式，对于大部分�
 
 
 
-![image-20200811222237856](..\resource\images\image-20200811222237856.png)
+![image-20200811222237856](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20200811222237856.png)
 
 
 

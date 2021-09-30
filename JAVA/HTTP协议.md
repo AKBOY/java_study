@@ -34,11 +34,11 @@ eg：http://localhost:8080/admin/index.html?a=1#name
 
 格式：
 
-![image-20201002132021474](..\resource\images\image-20201002132021474.png)
+![image-20201002132021474](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20201002132021474.png)
 
 **响应消息Response**
 
-![image-20201002132600836](..\resource\images\image-20201002132600836.png)
+![image-20201002132600836](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20201002132600836.png)
 
 
 
@@ -74,7 +74,7 @@ Https比http多了secure（安全）性这个概念，实际上，Https并不是
 
 **HTTPS 就是身披了一层 SSL 的 HTTP**。
 
-![image-20201015204718336](..\resource\images\image-20201015204718336.png)
+![image-20201015204718336](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20201015204718336.png)
 
 - 最简单的，HTTP在地址栏以http://开头，而https是以https://开头
 - Http 是未经安全加密的协议，它的传输过程中容易被攻击者监听、数据容易被盗取，发送方和接收方容易被伪造；而https是安全的协议，它通过**秘钥交换算法-签名算法-对称加密算法-摘要算法** 能够解决这些问题

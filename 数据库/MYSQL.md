@@ -321,7 +321,7 @@ MySQL 5.6 及以后的版本，MyISAM 和 InnoDB 存储引擎均支持全文索�
 */
 ```
 
-```jql
+```sql
 create [unique|cluster] index 索引名 on 表名(列名[ASC|AESC])
 create [单一索引|聚簇索引] index 索引名 on 表名(列名[升序|降序])
 ```
@@ -358,7 +358,7 @@ B+树有两种类型的节点：内部节点（也称索引节点）和叶子节
 
 内部节点的key都是按照从小到大的顺序排列，对于内部节点中的一个key，左子树中的所有key都小于它，右子树中所有key都大于它，叶子节点中记录也是按照从小到大的顺序排列的。
 
-每个叶子节点都存在相邻叶子节点的引用![image-20201014153254394](..\resource\images\image-20201014153254394.png)
+每个叶子节点都存在相邻叶子节点的引用![image-20201014153254394](https://raw.githubusercontent.com/AKBOY/chuyx_study/master/resource/images/image-20201014153254394.png)
 
 
 
