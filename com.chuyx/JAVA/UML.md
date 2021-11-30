@@ -1,3 +1,10 @@
+# UML 介绍
+** UML这三个字母的全称是Unified Modeling Language，直接翻译就是统一建模语言，简单地说就是一种有特殊用途的语言。 **
+
+## 对象 类型介绍
+- 接口
+ - 《interface》
+
 
 ## 属性表示
 > -表示private  
