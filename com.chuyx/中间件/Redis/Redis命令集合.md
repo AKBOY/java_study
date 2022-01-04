@@ -19,3 +19,15 @@ QUEUED
 ```shell
 taskset -c 0 ./redis-server
 ```
+
+3. 查询Redis内存使用详情
+```shell
+INFO memory
+# Memory
+used_memory:1073741736      // used_memory 是 Redis 为了保存数据实际申请使用的空间
+used_memory_human:1024.00
+Mused_memory_rss:1997159792 // used_memory_rss 是操作系统实际分配给 Redis 的物理内存空间，里面就包含了碎片
+used_memory_rss_human:1.86G
+…
+mem_fragmentation_ratio:1.86    // used_memory_rss/ used_memory
+```
