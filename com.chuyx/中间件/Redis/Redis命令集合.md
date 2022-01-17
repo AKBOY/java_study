@@ -31,3 +31,10 @@ used_memory_rss_human:1.86G
 …
 mem_fragmentation_ratio:1.86    // used_memory_rss/ used_memory
 ```
+
+
+4. 设置Redis缓存最大容量
+```shell
+CONFIG SET maxmemory 4G
+```
+
